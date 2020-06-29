@@ -1,0 +1,627 @@
+@import "_veriables.scss";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+}
+
+
+nav 
+{
+    z-index: 3;
+    background-color: rgba(59, 90, 102, 0.61);
+
+    #navbarNav ul li{
+        margin-left: 20px;
+        color: #fff;
+    }
+
+    button span{
+        color: #fff;
+    }
+
+    button:focus{
+        outline: none;
+    }
+
+    ul li a{
+        color: #fff;
+    }
+
+    ul li a:hover{color: rgb(248, 144, 83);
+        font-weight: bold;
+
+    }
+
+    .navbar-brand a{
+        color: rgb(248, 144, 83);
+        font-size: 1.8rem;
+        font-weight: bold;
+
+        &:hover{
+            text-decoration: none;
+        }
+
+        
+    }
+}
+// --nav
+
+header
+{
+
+    position: relative;
+
+    .main--heading{
+        position: absolute;
+        z-index: 10;
+        color: rgb(236, 232, 232);
+        font-weight: bold;
+        top: 25%;
+    }
+
+    .btn-box{
+        padding-top: 30px;
+        position: relative;
+        z-index: 20;
+
+        .btn{
+            color: rgb(236, 232, 232);
+            background-color:  rgb(248, 144, 83);
+            border: 0px;
+
+            &:hover{
+                transform: translate(1px,-4px);
+                transition: transform .3s ease-out;
+                background-color:rgb(255, 94, 0) ;
+            }
+
+            &:focus{
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    #layer::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: rgba(8, 14, 46, 0.448);
+        z-index: 2;
+    }
+
+    .carousel-inner .carousel-item img{
+       height: 120vh;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next{
+        position: absolute;
+        z-index: 10;
+    }
+
+    .fa-arrow-circle-right:before,
+    .fa-arrow-circle-left:before{
+        color: rgb(255, 146, 83);
+    }
+
+   .prev-icon,
+   .next-icon
+   {
+       font-size: 1.7rem;
+   }
+    
+
+
+}
+
+
+.tabs{
+    background-image: url(/src/images/pic5.png);
+    background-position: center;
+    background-size: cover;
+    .container{
+        position: relative;
+        border: 0px;
+        border-top-right-radius: 40px;
+        border-top-left-radius: 40px;
+        font-weight: bold;
+        // background-color: rgb(46, 55, 110);
+        color: rgb(236, 232, 232);
+    }
+
+    .nav--tabs{
+        position: absolute;
+        bottom: 100%;
+        background-color: rgba(8, 14, 46, 0.767);
+        z-index: 20;
+        border-top-left-radius: 70px;
+        border-top-right-radius: 70px;
+
+        .hotel{border-top-left-radius: 70px;}
+        .help{border-top-right-radius: 70px;}
+
+
+        h4{
+            text-align: center;
+            color: rgb(236, 232, 232);
+
+            i{
+                color: rgb(224, 136, 85);
+            }
+        }
+    }
+
+}
+
+// cards section
+
+.tour--card
+{
+    padding: 80px 0px;
+   background-color: #eee;
+
+
+    .card--row{
+        padding-top: 50px;
+        justify-content: space-between;
+        }
+
+    .card{
+        position: relative;
+        margin-top: 8px;
+        }
+
+        .card,
+        .card--layer,
+        .img-fluid{
+            border-radius: 5px ;
+        }
+
+        
+       
+
+    .card--layer{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        // transform: scale(0,0);
+        background-color: rgba(63, 61, 163, 0.589);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        color: rgb(236, 232, 232);
+        }
+
+        // .card:hover .card--layer{
+        //     transform: scale(1,1);
+        //     transition: transform ease-in-out .6s;
+        //     transform-origin:50% 20%;
+        // }
+
+            .tour--date{
+                padding: 7px 15px;
+                background-color: rgb(224, 136, 85);
+                border-radius: 20px;              
+            }
+
+            .tour--city{
+                font-weight: bold;
+            }
+
+            .tour--price{
+                font-weight: bold;
+                color: rgb(224, 136, 85);
+            }
+
+            .card--layer__btn{
+                color: rgb(236, 232, 232);
+                // background-color: rgba(8, 14, 46, 0.767);
+                outline: 2px solid rgb(224, 136, 85);
+                border-radius: 0px;
+                padding: 5px 15px;
+                transition: transform .3s ease-out;
+
+                &:hover{
+                    transform: translate(1px, -4px);
+                    background-color: rgb(224, 136, 85);
+                }
+            }
+
+}
+
+
+// Testimonial Section
+
+.testimonial--section{
+  
+    padding: 70px 0px;
+    background: linear-gradient(to right, rgba(246, 182, 63, 0.945),
+    rgba(200, 68, 112, 0.623),
+    rgba(29, 29, 92, 0.904));
+
+
+
+        .testimonial--content{
+            padding: 20px ;
+            background-color: #eee;
+            border-top-left-radius: 29px;
+            border-bottom-right-radius: 29px;
+            transform: skewX(0deg);
+            position: relative;
+            
+            @media (min-width : 992px) {
+                transform: skewX(-15deg);
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                
+            }
+
+            &::after{
+                content: "";
+                width: 120px;    
+                height: 100px;
+                border-bottom: 7px solid rgb(255, 146, 83);
+                border-right: 7px solid rgb(255, 146, 83);
+                position: absolute;
+                border-bottom-right-radius: 20px;
+                bottom: 0px;
+                right: 5px;
+
+                
+                
+            }
+
+
+            &::before{
+                content: "";
+                width: 120px;    
+                height: 100px;
+                border-top: 7px solid rgb(255, 146, 83);
+                border-left: 7px solid rgb(255, 146, 83);
+                position: absolute;
+                border-top-left-radius: 20px;
+                top: 0px;
+                left: 5px;
+
+               
+            }
+        }
+}
+
+// Room Services
+
+section.room--services
+{
+    padding: 100px 0px;
+    
+
+
+        .container{
+                    padding-top: 50px;
+                    color: rgb(121, 117, 117);
+
+             
+             .row{
+                 margin-bottom: 20px;
+             }       
+
+            .fa-star:before{
+                color: rgb(255, 219, 57);
+           }
+
+           .img-1{        
+                  background: url(/src/images/crd4.jpg);
+                  &::after{
+                      content: "Austrailia";
+
+                  }
+           }
+           .img-2{        
+                  background-image: url(/src/images/pic1.jpg);
+                  &::after{
+                    content: "Turkey";
+                }
+           }
+           .img-3{        
+                  background-image: url(/src/images/crd3.jpg);
+                  &::after{
+                    content: "New York";
+                }
+           }
+           .img-4{        
+                  background-image: url(/src/images/pic3.jpg);
+                  &::after{
+                    content: "Toronto";
+                }
+           }
+           .img-5{        
+                  background-image: url(/src/images/pic2.jpg);
+                  &::after{
+                    content: "greenland";
+                }
+           }
+           .img-6{        
+                  background-image: url(/src/images/pic4.jpg);
+                  &::after{
+                    content: "Hollywood";
+                }
+           }
+            
+            .img-1,
+            .img-2,
+            .img-3,
+            .img-4,
+            .img-5,
+            .img-6
+            {
+                background-position: center ;
+                background-size: cover;
+                border-radius: 5px ;
+                position: relative;
+                
+
+                @media (max-width:576px){
+                    width: 100%;
+                    height: 45vh;
+                }
+             
+                
+
+                &::after{
+                    // content: "Austrailia ";
+                    position: absolute;
+                    left: 0%;
+                    bottom: 10px;
+                    background-color:rgba(8, 14, 46, 0.967);
+                    padding: 5px 10px;
+                    color: rgba(235, 235, 236, 0.815);
+                    font-weight: bold;
+
+                }
+
+
+                
+            }
+
+            
+
+            .room--rate{
+                position: relative;
+    
+                &::after{
+                    content: " /Neight";
+                    color: rgba(29, 29, 92, 0.904);
+                    font-size: 1rem;
+                    position: absolute;
+                    bottom: 0px;
+                }
+    
+               
+            }
+
+            .btn{
+                padding: 7px 14px;
+                border: 1px solid rgba(8, 14, 46, 0.767);
+                border-radius: 0px;
+                font-weight: bold;
+                color: rgb(121, 117, 117);
+
+
+                &:hover{
+                    transform: translate(1px,-4px);
+                    transition: transform .3s ease-out;
+                    background-color:rgb(248, 144, 83);
+                    color: #fff;
+                }
+            }
+
+            
+        }
+
+}
+
+// trending now
+
+section.trending
+{
+    padding-bottom: 100px;
+   
+
+    .img-1{        
+        background: url(/src/images/crd4.jpg);
+        
+ }
+ .img-2{        
+        background-image: url(/src/images/pic1.jpg);
+       
+ }
+ .img-3{        
+        background-image: url(/src/images/crd3.jpg);
+       
+ }
+ .img-4{        
+        background-image: url(/src/images/pic3.jpg);
+      
+ }
+ .img-5{        
+        background-image: url(/src/images/pic2.jpg);
+       
+ }
+ .img-6{        
+        background-image: url(/src/images/pic4.jpg);
+       
+ }
+  
+  .img-1,
+  .img-2,
+  .img-3,
+  .img-4,
+  .img-5,
+  .img-6
+  {
+      background-position: center ;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 5px ;
+      position: relative;
+  }
+
+    .trending--locations div{
+             position: relative; 
+             height: 200px;
+             margin-top: 20px;
+                     .trend--layer{
+                         display: flex;
+                         align-items: center;
+                         justify-content: center;
+                         flex-direction: column;
+                         position: absolute;
+                         width: 100%;
+                         height: 50%;
+                         left: 0px;
+                         bottom: 0px;
+                         padding: 10px ;
+                         color: rgb(236, 232, 232);
+                         background-color: rgba(8, 14, 46, 0.767);
+
+                        .location{
+                            color: rgb(224, 136, 85);
+                            font-weight: bold;
+                        }
+
+                        h3{
+                            font-size: 1.2rem;
+                            margin: 0px;
+                        }
+
+                        p{
+                            font-size: 1rem;
+                        }
+                     }
+            }
+
+    
+}
+
+
+// contact us
+
+section.contact
+{
+    // background: linear-gradient(to right, rgba(246, 182, 63, 0.945), rgba(200, 68, 112, 0.623), rgba(29, 29, 92, 0.904));
+
+    background-image: url(/src/images/gggg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 30px;
+
+
+    .contact--heading{
+        color: rgba(29, 29, 92, 0.804);
+    }
+
+
+    // .contact--img{
+    //     // background-image: url(/src/images/3318308.jpg);
+    //     background-position: center;
+    //     background-size: cover;
+    //     background-repeat: no-repeat;
+    //     width: 100%;
+    //     min-height:300px ;
+    // }
+
+    
+
+    .contact--form input,
+    .contact--form textarea
+    {
+        border: 0px;
+        border-radius: 0px;
+        border-bottom: 1px solid rgba(8, 14, 46, 0.767);
+        background: transparent;
+
+        &:focus{
+            box-shadow: none;
+        }
+    }
+
+
+    svg path{
+        fill: rgba(29, 29, 92, 0.904);
+    }
+}
+
+// footer
+
+footer{
+
+    background-color: rgba(8, 14, 46, 0.967);
+    position: relative;
+    @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+}
+
+/* Taller footer on small screens */
+
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+
+
+footer a {
+  color: rgb(235, 229, 229);
+  text-decoration:none;
+}
+
+footer a:hover, footer a:focus {
+  color: #aaa;
+  text-decoration:none;
+  border-bottom:1px dotted #999;
+}
+
+footer .form-control {
+    background-color: #a2a2a3;
+    box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.383);
+    border: none;
+    resize: none;
+    color: #c3cccc;
+    padding: 0.7em 1em;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
