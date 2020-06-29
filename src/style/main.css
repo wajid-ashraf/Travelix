@@ -19,11 +19,33 @@ html {
 
 body {
   /* Margin bottom by footer height */
+  font-family: "Roboto", sans-serif;
+  font-size: .9rem;
 }
 
 nav {
   z-index: 3;
   background-color: rgba(59, 90, 102, 0.61);
+}
+
+nav .nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+nav .nav-item::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  border-bottom: 3px solid #f89053;
+  left: -110%;
+  bottom: 0px;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+nav .nav-item:hover:after {
+  left: 0%;
 }
 
 nav #navbarNav ul li {
@@ -41,6 +63,7 @@ nav button:focus {
 
 nav ul li a {
   color: #fff;
+  padding: 0.3rem  !important;
 }
 
 nav ul li a:hover {
@@ -68,6 +91,10 @@ header .main--heading {
   color: #ece8e8;
   font-weight: bold;
   top: 25%;
+}
+
+header .main--heading h1, header .main--heading h3 {
+  font-family: "Permanent Marker", cursive;
 }
 
 header .btn-box {
@@ -105,7 +132,7 @@ header #layer::before {
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(8, 14, 46, 0.448);
+  background-color: rgba(8, 14, 46, 0.5);
   z-index: 2;
 }
 
@@ -121,7 +148,7 @@ header .carousel-control-next {
 
 header .fa-arrow-circle-right:before,
 header .fa-arrow-circle-left:before {
-  color: #ff9253;
+  color: #fff;
 }
 
 header .prev-icon,
@@ -254,8 +281,8 @@ header .next-icon {
 .testimonial--section .testimonial--content {
   padding: 20px;
   background-color: #eee;
-  border-top-left-radius: 29px;
-  border-bottom-right-radius: 29px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   -webkit-transform: skewX(0deg);
           transform: skewX(0deg);
   position: relative;
@@ -272,26 +299,36 @@ header .next-icon {
 
 .testimonial--section .testimonial--content::after {
   content: "";
-  width: 120px;
-  height: 100px;
-  border-bottom: 7px solid #ff9253;
-  border-right: 7px solid #ff9253;
+  width: 80px;
+  height: 80px;
+  border-top: 10px solid #ff9253;
+  border-right: 10px solid #ff9253;
   position: absolute;
-  border-bottom-right-radius: 20px;
-  bottom: 0px;
+  top: 0px;
   right: 5px;
+}
+
+@media (min-width: 992px) {
+  .testimonial--section .testimonial--content::after {
+    right: 0px;
+  }
 }
 
 .testimonial--section .testimonial--content::before {
   content: "";
-  width: 120px;
-  height: 100px;
-  border-top: 7px solid #ff9253;
-  border-left: 7px solid #ff9253;
+  width: 80px;
+  height: 80px;
+  border-bottom: 10px solid #ff9253;
+  border-left: 10px solid #ff9253;
   position: absolute;
-  border-top-left-radius: 20px;
-  top: 0px;
+  bottom: 0px;
   left: 5px;
+}
+
+@media (min-width: 992px) {
+  .testimonial--section .testimonial--content::before {
+    left: 0px;
+  }
 }
 
 section.room--services {

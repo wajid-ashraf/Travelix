@@ -1,5 +1,8 @@
 @import "_veriables.scss";
 
+$Main--heading:'Permanent Marker', cursive;
+$regular:'Roboto', sans-serif;
+
 *{
     padding: 0px;
     margin: 0px;
@@ -17,6 +20,9 @@ html {
 }
 body {
   /* Margin bottom by footer height */
+
+  font-family: $regular;
+  font-size: .9rem;
 }
 
 
@@ -24,6 +30,31 @@ nav
 {
     z-index: 3;
     background-color: rgba(59, 90, 102, 0.61);
+
+    
+    .nav-item{
+        position: relative;
+        overflow: hidden;
+        
+
+        &::after{
+            content: "";
+            width: 100%;
+            position: absolute;
+            border-bottom: 3px solid rgb(248, 144, 83);
+            left: -110%;
+            bottom: 0px;
+            transition: all .5s ease-out;
+        }
+
+        &:hover:after{
+            left: 0%;
+        }
+
+      
+    }
+   
+
 
     #navbarNav ul li{
         margin-left: 20px;
@@ -40,6 +71,7 @@ nav
 
     ul li a{
         color: #fff;
+        padding:0.3rem  !important;
     }
 
     ul li a:hover{color: rgb(248, 144, 83);
@@ -72,6 +104,10 @@ header
         color: rgb(236, 232, 232);
         font-weight: bold;
         top: 25%;
+
+        h1,h3{
+            font-family: $Main--heading
+        }
     }
 
     .btn-box{
@@ -104,7 +140,7 @@ header
         left: 0;
         bottom: 0;
         right: 0;
-        background-color: rgba(8, 14, 46, 0.448);
+        background-color: rgba(8, 14, 46, 0.5);
         z-index: 2;
     }
 
@@ -120,7 +156,7 @@ header
 
     .fa-arrow-circle-right:before,
     .fa-arrow-circle-left:before{
-        color: rgb(255, 146, 83);
+        color: #fff;
     }
 
    .prev-icon,
@@ -264,8 +300,8 @@ header
         .testimonial--content{
             padding: 20px ;
             background-color: #eee;
-            border-top-left-radius: 29px;
-            border-bottom-right-radius: 29px;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
             transform: skewX(0deg);
             position: relative;
             
@@ -278,30 +314,34 @@ header
 
             &::after{
                 content: "";
-                width: 120px;    
-                height: 100px;
-                border-bottom: 7px solid rgb(255, 146, 83);
-                border-right: 7px solid rgb(255, 146, 83);
+                width: 80px;    
+                height: 80px;
+                border-top: 10px solid rgb(255, 146, 83);
+                border-right: 10px solid rgb(255, 146, 83);
                 position: absolute;
-                border-bottom-right-radius: 20px;
-                bottom: 0px;
+                top: 0px;
                 right: 5px;
 
-                
-                
+                @media (min-width:992px){
+                    right: 0px;
+                }
+
+`                
             }
 
 
             &::before{
                 content: "";
-                width: 120px;    
-                height: 100px;
-                border-top: 7px solid rgb(255, 146, 83);
-                border-left: 7px solid rgb(255, 146, 83);
+                width: 80px;    
+                height: 80px;
+                border-bottom: 10px solid rgb(255, 146, 83);
+                border-left: 10px solid rgb(255, 146, 83);
                 position: absolute;
-                border-top-left-radius: 20px;
-                top: 0px;
+                bottom: 0px;
                 left: 5px;
+                @media (min-width:992px){
+                    left: 0px;
+                }
 
                
             }
